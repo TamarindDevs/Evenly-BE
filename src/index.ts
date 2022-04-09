@@ -2,6 +2,7 @@ import express from "express";
 import { cpus } from "os";
 import cluster from "cluster";
 import cors from "cors";
+import "express-async-errors";
 
 const numCPUs = cpus().length;
 
