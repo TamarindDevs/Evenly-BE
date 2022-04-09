@@ -2,6 +2,8 @@ import express from "express";
 import { cpus } from "os";
 import cluster from "cluster";
 import cors from "cors";
+// eslint-disable-next-line import/no-unresolved
+import globalExceptionLayer from "@error/errorHandler";
 import "express-async-errors";
 
 const numCPUs = cpus().length;
@@ -29,6 +31,7 @@ if (cluster.isPrimary) {
     res.send("Hello world");
   });
 
+  app.use(globalExceptionLayer);
   app.listen(3000, () => {
     console.info(`Worker ${process.pid} started`);
   });

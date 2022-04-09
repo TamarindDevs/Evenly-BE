@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "eslint-import-resolver-typescript": "^2.7.1",
     "express": "^4.17.3",
     "express-async-errors": "^3.1.1",
     "mongoose": "^6.2.10",
@@ -59,6 +60,11 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": "git pull upstream main"
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
   }
 }

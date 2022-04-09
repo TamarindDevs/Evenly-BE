@@ -14,5 +14,10 @@
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "quotes": ["error", "double"],
     "no-console": ["error", { "allow": ["warn", "error", "info"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
