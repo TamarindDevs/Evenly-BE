@@ -1,4 +1,7 @@
 /* eslint-disable no-undef */
-test("first test", () => {
-  expect(1).toBe(1);
+// beforeAll, afterAll, beforeEach, afterEach, jest.fn, jest.mock, jest.spyOn, expect, test, describe, it
+describe("first test", () => {
+  it("should be 1", () => {
+    expect(1).toBe(1);
+  });
 });
